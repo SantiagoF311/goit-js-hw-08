@@ -6,6 +6,7 @@ console.log(galleryItems);
 
 import simpleLightbox from 'simplelightbox';
 
+
 const galleryContainer = document.querySelector('ul.gallery');
 const photosmarkup = createGalleryItem(galleryItems);
 
