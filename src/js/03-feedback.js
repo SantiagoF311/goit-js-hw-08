@@ -1,12 +1,18 @@
+import throttle from 'lodash.throttle';
+
 const input = document.querySelector('input');
 
-const inputValue = input.addEventListener('input', e => {
-  const inputEmail = input.value;
-  localStorage.setItem('feedback-form-state', inputEmail);
-});
+  throttle(() => {
+  const formState = {
+    email: emailInput.value,
+    message: messageInput.value,
+  };
+  const formStateString = `email=${formState.email}&message=${formState.message}`;
+  localStorage.setItem('feedback-form-state', formStateString);
+}, 500);
 
 if (localStorage.key !== '') {
-  const loadValue = () => {
+  const loadValue = () => { 
     const saved = localStorage.getItem('feedback-form-state');
     input.value = saved;
   };
