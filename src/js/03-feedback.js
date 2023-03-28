@@ -2,7 +2,7 @@ import throttle from 'lodash.throttle';
 
 const input = document.querySelector('input');
 
-  throttle(() => {
+throttle(() => {
   const formState = {
     email: emailInput.value,
     message: messageInput.value,
@@ -12,7 +12,7 @@ const input = document.querySelector('input');
 }, 500);
 
 if (localStorage.key !== '') {
-  const loadValue = () => { 
+  const loadValue = () => {
     const saved = localStorage.getItem('feedback-form-state');
     input.value = saved;
   };
