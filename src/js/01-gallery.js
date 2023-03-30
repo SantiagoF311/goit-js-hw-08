@@ -5,6 +5,7 @@ import { galleryItems } from './gallery-items';
 console.log(galleryItems);
 
 import simpleLightbox from 'simplelightbox';
+import 'simplelightbox/dist/simple-lightbox.min.css';
 
 const galleryContainer = document.querySelector('ul.gallery');
 const photosmarkup = createGalleryItem(galleryItems);
@@ -20,8 +21,7 @@ function createGalleryItem(element) {
     .join(' ');
 }
 
-galleryContainer.insertAdjacentHTML('beforeend',
-  photosmarkup);
+galleryContainer.insertAdjacentHTML('beforeend', photosmarkup);
 
 const galleryHandler = new simpleLightbox('.gallery a', {
   captionsData: 'alt',
