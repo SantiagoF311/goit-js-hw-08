@@ -20,7 +20,8 @@ function createGalleryItem(element) {
     .join(' ');
 }
 
-galleryContainer.insertAdjacentHTML('beforeend', photosmarkup);
+galleryContainer.insertAdjacentHTML('beforeend',
+  photosmarkup);
 
 const galleryHandler = new simpleLightbox('.gallery a', {
   captionsData: 'alt',
